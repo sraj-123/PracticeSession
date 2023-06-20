@@ -1,0 +1,541 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar {
+            background-color: #333333;
+            overflow: hidden;
+        }
+        .navbar a{
+            color:white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            float: right;
+            margin-top: 16px;
+            
+           
+            
+        }
+        .navbar a:hover{
+            background-color:greenyellow;
+            color:black;
+            font-size: 18px;
+        }
+        .active{
+            float: left;
+            font-size: 48pt;
+            color: white;
+            margin-left: 30px;
+            margin-top: 7px;
+            margin-bottom: 4px;
+            
+        }
+        .container{
+            margin-top:10px ;
+           
+        }
+        .container a{
+            padding: 9px 10px;
+                  
+        }
+        input{
+            font-size: 15px;
+            margin-left: 8px;
+            float: right;
+            margin-right: 84px;
+            width: 20%;
+        }
+        .container2{
+            background-color:lightgrey;
+            margin-top: 10px;
+            height: 400px;
+
+
+        }
+        .container2 .imo{
+            width: 500px;
+            margin-top: -20px;
+            margin-left: 30px;
+            
+
+
+        }
+        p{
+            margin-left: 50%;
+            margin-top: 10px;
+        }
+       .virus{
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+       }
+       .righttop{
+        position: absolute;
+        top: 38%;
+        bottom: 16%;
+        left: 46%;
+       }
+       .thought{
+        color: #333333;
+        font-size: 18pt;
+       }
+       /* .container2.thought {
+        font-size: 18pt;
+        color: #333333;
+
+       }   */
+       .sports{
+        font-style: italic;
+        margin-left: 6px;
+       }
+       /* }
+       .sporstimg{
+        width: 30%;
+       }
+       .jeans{
+        position: absolute;
+        left: 40%;
+        
+       } */
+       .deal_of_day{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 50px;
+        padding: 30px;
+       }
+       .sports{
+        max-width: 31.33%;
+        padding: 0 10px;
+        height: 240px;
+       }
+       .sports img{
+        width: 100%;
+        height: 100%;
+       }
+       .firstImage{
+        width: 300px;
+       }
+       .firstImage{
+        border: 4px solid black;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+
+       }
+       .deal{
+        margin-left: 25px;
+       }
+       .fig1{
+        margin-left: 8px;
+
+       }
+       h6{
+        margin-left: 38px;
+        font-size: 15px;
+        margin-top: 5px;
+       }
+       .row{
+        display: flex;
+       }
+       .column{
+        flex:33.33%;
+        padding: 5px;
+       }
+      .secondImage{
+        border: 4px solid black;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+        
+
+      }
+      .jeanstext{
+        margin-left: 35px;
+      }
+      .thirdImage{
+        border: 4px solid black;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+
+
+      }
+      .tshirttext{
+        margin-left: 35px;
+      }
+      .fourthImage{
+        border: 4px solid black;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+      }
+      .kidstext{
+        margin-left: 35px; 
+      }
+      /* New line images */
+      .deal_of_day1{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 50px;
+        padding: 30px;
+       }
+       .sports1{
+        max-width: 31.33%;
+        padding: 0 10px;
+        height: 240px;
+       }
+       .sports img1{
+        width: 100%;
+        height: 100%;
+       }
+       .firstImage1{
+        width: 300px;
+       }
+       .firstImage1{
+        border: 4px solid skyblue;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+        padding-bottom:20px;
+        background-color: skyblue;
+
+
+       }
+       .deal1{
+        margin-left: 25px;
+       }
+       .fig1{
+        margin-left: 8px;
+
+       }
+       h6{
+        margin-left: 38px;
+        font-size: 15px;
+        margin-top: 5px;
+       }
+       .row1{
+        display: flex;
+       }
+       .column1{
+        flex:33.33%;
+        padding: 5px;
+       }
+      .secondImage1{
+        border: 4px solid skyblue;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+        padding-bottom:20px;
+        background-color: skyblue;
+        
+        
+
+      }
+      .jeanstext1{
+        margin-left: 35px;
+      }
+      .thirdImage1{
+        border: 4px solid skyblue;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+        padding-bottom:20px;
+        background-color: skyblue;
+
+
+      }
+      .tshirttext1{
+        margin-left: 35px;
+      }
+      .fourthImage1{
+        border: 4px solid skyblue;
+        width: 200px;
+        margin-left: 50px;
+        height: 200px;
+        padding-bottom:20px;
+        background-color: skyblue;
+      }
+      .kidstext1{
+        margin-left: 35px; 
+      }
+      .kurtastext{
+        
+      }
+      figcaption{
+
+    margin-left: 127px;
+    margin-top: -23px;
+    font-weight: bold;
+    }
+    .information{
+        margin-left:100px;
+        margin-right: 100px;
+
+    }
+    span{
+        color:#333333;
+        font-size: 14pt;
+    }
+    .infor2{
+        margin-left: -1%;
+        margin-top: 10px;
+    }
+    .conatinerlast{
+        background-color: #131a22;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    li{
+        text-decoration: none;
+        list-style-type: none;
+        color: white;
+        padding: 10px;
+
+
+    }
+    .li1{
+        font-size: 18pt;
+        margin-right: 300px;
+
+
+    }
+    /* final container */
+    /* .row3{
+        display: flex;
+
+    }
+    .column3{
+        
+    flex: 33.3%;
+    padding: 5px;
+    margin-top: -377px;
+}
+        
+    
+    .column4{
+        margin-bottom: 30%;
+       
+    }
+    .li2{
+        font-size: 18pt;
+        margin-right: 600px;
+        margin-bottom: 10px;
+    } */
+    /* ul{
+        padding: 6px;
+    }
+    .li2{
+        font-size: 18pt;
+        margin-right: 300px;
+
+    }
+    .li3{
+        font-size: 18pt;
+        margin-right: 300px
+
+    } */
+    .row{
+        display: flex;
+    }
+    .column{
+        flex:50%;
+        padding: 10px;
+        height: 300%;
+    }
+    .conatinerlast{
+        background-color: #333333;
+    }
+    .li3{
+        font-size: 18pt;
+        color:white;
+    }
+    .firstImage:hover{
+        box-shadow: 0 10px 15px 0 grey;
+    }
+    .secondImage:hover{
+        box-shadow: 0 10px 15px 0 grey;
+    }
+    .thirdImage:hover{
+        box-shadow: 0 10px 15px 0 grey;
+    }
+    .fourthImage:hover{
+        box-shadow: 0 10px 15px 0 grey;
+    }
+    .firstImage1:hover{
+        box-shadow: 0 10px 15px 0 grey;
+    }
+    .secondImage1:hover{
+        box-shadow: 0 10px 15px 0 grey;
+
+    }
+    .thirdImage1:hover{
+        box-shadow: 0 10px 15px 0 grey;
+    }
+    .fourthImage1:hover{
+        box-shadow: 0 10px 15px 0 gray;
+    }
+      
+
+    </style>
+</head>
+<body>
+   
+   <nav class="navbar">
+    <h class="active">eStore</h>
+    <a href="#">Checkout</a>
+    <a href="#">Wish List</a>
+    <a href="#">Shopping</a>
+    <a href="#">Wish ListCart</a>
+    <a href="#">My Account</a>
+
+   </nav>
+   <div class="container">
+    <a>Men</a>
+    <a>Women</a>
+    <a>Kids</a>
+    <a>Protective Wear</a>
+    <a>Footwear</a>
+    <a>Accessories</a>
+    <a>Friday Casual</a>
+    <input type="search" placeholder="Search for Products & Brands">
+   </div>
+   <div class="container2">
+    <img src="/images/—Pngtree—black mask design for free_6234134.png" class="imo">
+    <div class="virus">
+    <p class="thought">STAY HOME, STAY SAFE</p>
+    
+</div>
+<div class="righttop">
+    <p class="pl">Contactless Deliveries</p>
+    <p class="pl">All delivery staff trained in covid-19 preventive measures</p>
+    <p class="pl">All delivery and warhouse staff are equipied with medical-grade hand sanatizers</p>
+    <p class="pl">All warhouse staff undergo daily mandatory thermal tempreature scanning</p>
+    <p class="pl">No deliveries in 'highly affected' areas</p>
+</div>
+</div>
+<div class="images">
+    <h2 class="deal">Deals of the day</h2>
+    <div class="row">
+        <div class="column">
+            <img src="/images/sports.jpg" alt="Mask" class="firstImage">
+            <h6 class="sportstext">Sports & Fitness Gear upto 80% off</h6>
+        </div>
+        <div class="column">
+            <img src="/images/jeans.jpg" alt="Mask" class="secondImage" width="300px">
+            <h6 class="jeanstext">Branded jeans for mens upto 50% off</h6>
+        </div>
+        <div class="column">
+            <img src="/images/tshirt.jpg" alt="Mask" class="thirdImage">
+            <h6 class="tshirttext">Branded T-shirt for mens Upto 60% Off</h6>
+        </div>
+        <div class="column">
+            <img src="/images/ids.jpg" alt="Mask" class="fourthImage">
+            <h6 class="kidstext">Branded Kids wears ..upto 80% off</h6>
+        </div>
+       
+    </div>
+ 
+</div>
+<div class="images">
+    <h2 class="deal">Fashion Categories</h2>
+    <div class="row1">
+        <div class="column1">
+            <img src="/images/Kurtas.jpg" alt="Mask" class="firstImage1" name="kurtas">
+            <figcaption>Kurtas</figcaption>      
+        </div>
+        <div class="column1">
+            <img src="/images/pants.jpg" alt="Mask" class="secondImage1" width="300px">
+            <figcaption>Pants</figcaption> 
+        </div>
+        <div class="column1">
+            <img src="/images/girls sandals.jpg" alt="Mask" class="thirdImage1">
+            <figcaption>Sandals</figcaption> 
+        </div>
+        <div class="column1">
+            <img src="/images/new shirts.jpg" alt="Mask" class="fourthImage1">
+            <figcaption>Shirts</figcaption> 
+        </div>
+       
+    </div>
+    <br>
+    <br>
+
+    <div class="information">
+
+    <span>
+        <p class="infor2">
+        <b> MOST SEARCHED FOR ON OUR WEBSITE: </b> Trend  Super  Elite  Credit  card5G  Mobile  PhonesPrimebook  |
+         LaptopsMot | Edge 40Bounce Infinity | E1Buy Laptop on EMIInfinix Zero Book UltraOPPO | Reno8 5GOPPO | Ren
+         o8 Pro 5G | Fresh Flower | BouquetElectric | Cycles | Badminton | Bouquet | Laptop Repair Services |AC Cl
+         eaning Services | Oneplus MonitorsGrievance | Redressal | Mobile Repair Services | Sell Old Mobile |  Pho
+         nes | Premium | Laptops | Electronics Store | Phone | coverInfinix | INBook |  Y1 PlusOkaya | Electric Ve
+         hicle |sbgauss | electric scooter | OPPO Reno7 Pro 5G | iPhone13 | iPhone 13 Pro | iPhone 13 Pro Max | iP
+         hone 13 Mini | Google Pixel 6a covers.
+        </p>
+    </span>
+    </div>
+    <br>
+    <div class="conatinerlast">
+    <div class="row">
+        <div class="column">
+        <ul>
+            <li class="li1">ACCOUNT</li>
+            <li>Orders</li>
+            <li>Returns/Refunds</li>
+            <li>Track Order</li>
+            <li>Frequently Asked Questions</li>
+        </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="li3">POLICIES</li>
+                <li>Payment Options</li>
+                <li>Terms & Conditions of Use</li>
+                <li>Terms & Conditions of Membership Program</li>
+                <li>Offer Terms & Conditions</li>
+                <li>Returns & Exchange Policy</li>
+                <li>Shipping Poilcy</li>
+                <li>Privacy Policy</li>
+                <li>Safety Checklist</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li class="li3">CONTACT</li>
+                <li>Customer Support</li>
+                <li>Store Locators</li>
+                <li>Help Center</li>
+                <br>
+                <li class="li3">About</li>
+                <li>Official Brand Store</li>
+                <li>About us</li>
+                <li>Carrers</li>
+        
+            </ul>
+
+        </div>
+        <div class="column">
+            <ul>
+                <li class="li3">SOCIAL</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+
+
+
+</body>
+</html>
+ -->
+

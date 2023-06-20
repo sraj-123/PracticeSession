@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+        <input id="result" type="text" placeholder="Enter your name">
+        <button onclick="clearResult()">C</button>
+        <button onclick="calculate('/')">/</button>
+        <button onclick="calculate('*')">*</button>
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('9')">9</button>
+        <button onclick="calculate('8')">8</button>
+        <button onclick="calculate('7')">7</button>
+        <button onclick="calculate('4')">6</button>
+        <button onclick="calculate('5')">5</button>
+        <button onclick="calculate('4')">4</button>
+        <button onclick="calculate('3')">3</button>
+        <button onclick="calculate('.')">.</button>
+        <button onclick="calculate('=')">=</button>
+    </div>
+
+    <script>
+        let calculation = "";
+        function calculate(value){
+            if(value === "="){
+                document.getElementById("result").value= eval(calculation);
+            }
+            else{
+                calculation+=value;
+                document.getElementById("result").value  = calculation;
+            }
+        }
+        function clearResult(){
+            calculation = "";
+            document.getElementById("result").value = "";
+        }
+
+
+
+
+    </script>
+</body>
+</html> -->
+

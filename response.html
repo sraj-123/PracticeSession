@@ -1,0 +1,322 @@
+<!--  -->
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee Data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>    
+    /* Your CSS styles here */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: #333333;
+      background-color: #e2e2e2;
+      margin: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #2335b8;
+      padding: 10px 30px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #2335b8;
+      padding-bottom: 15px;
+      margin-top: 68px;
+    }
+
+    .container {
+      width: 1420px;
+      margin: 0 auto;
+      padding: 60px;
+      background-color: #ffffff;
+    }
+
+    .employee-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .employee-list-item {
+      flex: 0 0 200px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .employee-list-item:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    .employee-list-item:nth-child(odd) {
+      background-color: #eaeaf8;
+    }
+
+    .employee-details-card {
+      background-color: #ffffff;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      margin-left: 30px;
+    }
+
+    .employee-details-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .employee-details-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .employee-details-card p {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 45px;
+      background-color: #e2e2e2;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 418px) {
+      header {
+        height: 75px;
+      }
+
+      .employee-list-item {
+        flex-basis: 100%;
+      }
+
+      .employee-details-card {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Employee Data</h1>
+  </header>
+
+  <div class="container">
+    <div id="employee-list-section">
+      <h2>Employee List</h2>
+      <div class="employee-list">
+        <!-- Employee list will be dynamically populated here using JavaScript -->
+      </div>
+    </div>
+
+    <div id="employee-details-section">
+      <!-- Employee details will be displayed here when a list item is clicked -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Employee Data
+  </footer>
+
+  <script>
+        const employees = [
+      {
+        id: 1,
+        name: 'John Doe',
+        employeeId: 'EMP001',
+        empire: 'ABC',
+        doj: '2020-01-01',
+        totalExp: '3 years',
+        workLocation: 'New York',
+        technology: 'JavaScript',
+      },
+      {
+        id: 2,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 3,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 4,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 5,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 6,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 7,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 8,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 9,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 10,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 11,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      {
+        id: 12,
+        name: 'Jane Smith',
+        employeeId: 'EMP002',
+        empire: 'XYZ',
+        doj: '2018-05-15',
+        totalExp: '5 years',
+        workLocation: 'London',
+        technology: 'Python',
+      },
+      // Add more employee objects as needed
+    ];
+
+    const employeeListSection = document.getElementById('employee-list-section');
+    const employeeDetailsSection = document.getElementById('employee-details-section');
+
+    // Populate employee list
+    const employeeList = employees.map(employee => `
+      <div class="employee-list-item" onclick="showEmployeeDetails(${employee.id})">
+        ${employee.name} (ID: ${employee.employeeId})
+      </div>
+    `).join('');
+
+    employeeListSection.querySelector('.employee-list').innerHTML = employeeList;
+
+    function showEmployeeDetails(id) {
+      const employee = employees.find(item => item.id === id);
+
+      // Generate HTML for employee details
+      const employeeDetails = `
+        <div class="employee-details">
+          <h3>${employee.name}</h3>
+          <table>
+            <tr>
+              <td>Employee ID:</td>
+              <td>${employee.employeeId}</td>
+            </tr>
+            <tr>
+              <td>Empire:</td>
+              <td>${employee.empire}</td>
+            </tr>
+            <tr>
+              <td>Date of Joining:</td>
+              <td>${employee.doj}</td>
+            </tr>
+            <tr>
+              <td>Total Experience:</td>
+              <td>${employee.totalExp}</td>
+            </tr>
+            <tr>
+              <td>Work Location:</td>
+              <td>${employee.workLocation}</td>
+            </tr>
+            <tr>
+              <td>Technology:</td>
+              <td>${employee.technology}</td>
+            </tr>
+          </table>
+        </div>
+      `;
+
+      employeeDetailsSection.innerHTML = employeeDetails;
+    }
+  </script>
+</body>
+
+</html>

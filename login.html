@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class="login-form" onsubmit="return validation()">
+        <div class="font1">Email or Phone</div>
+        <div class="error">Error</div>
+        <input type="email" autocomplete="off" id="email" name="email">
+        <div class="font2">Password</div>
+        <div class="error">Error</div>
+        <input type="password" id="password" name="password">
+        <input type="submit" name="submit">
+
+    </form>
+
+    <script>
+        let email = ["login"]["email"];
+        let password = ["login"]["password"];
+        function validate(){
+            if(email.value.trim()){
+                email.style.borderColor = "red";
+                email_error.style.display = "block";
+                email.focus();
+                return false;
+
+            }
+            if(password.value.trim()){
+                password.style.borderColor = "red";
+                password_error.style.display = "block";
+                password.focus();
+                return false;
+
+
+            }
+            return true;
+        }
+        function email_verify(){
+            if(email.value.trim()){
+                email.style.borderColor = "silver";
+                email_error.style.display = "none";
+                email.focus();
+                return false;
+            }
+            else{
+                email.style.borderColor = "silver";
+                email_error.style.display = "none";
+            }
+        }
+        function password_verify(){
+            if(password.value.trim()){
+                password.style.borderColor = "silver";
+                password_error.style.display = "none";
+                password.focus();
+                return false;
+            }
+            else{
+                password.style.borderColor = "silver";
+                password_error.style.display = "none";
+                
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

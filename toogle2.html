@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee Data</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: #333333;
+      background-color: #e2e2e2;
+      margin: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #2335b8;
+      padding: 10px 30px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+      border-bottom: 3px solid #2335b8;
+      padding-bottom: 15px;
+    }
+
+    .container {
+      width: 1420px;
+      margin: 0 auto;
+      padding: 60px;
+      background-color: #ffffff;
+    }
+
+    .employee-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .employee-list-item {
+      flex: 0 0 200px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .employee-list-item:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    .employee-list-item:nth-child(odd) {
+      background-color: #eaeaf8;
+    }
+
+    .employee-details-card {
+      background-color: #ffffff;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      margin-left: 30px;
+    }
+
+    .employee-details-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .employee-details-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .employee-details-card p {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 45px;
+      background-color: #e2e2e2;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 418px) {
+      header {
+        height: 75px;
+      }
+
+      .employee-list-item {
+        flex-basis: 100%;
+      }
+
+      .employee-details-card {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Employee Data</h1>
+  </header>
+
+  <div class="container">
+    <div id="employee-list-section">
+      <h2>Employee List</h2>
+      <div class="employee-list">
+        <!-- Employee list will be dynamically populated here using JavaScript -->
+      </div>
+    </div>
+
+    <div id="employee-details-section">
+      <!-- Employee details card will be displayed here when a list item is clicked -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Employee Data
+  </footer>
+
+  <script>
+    // JavaScript code to fetch and populate employee data from JSON
+    const employeeListSection = document.getElementById('employee-list-section');
+    const employeeDetailsSection = document.getElementById('employee-details-section');
+
+    fetch('http://jsonblob.com/api/923947078393282560')
+      .then(response => response.json())
+      .then(data => {
+        // Populate employee list
+        const employeeList = data.slice(0, 11).map(employee => `
+          <div class="employee-list-item" onclick="showEmployeeDetails(${employee.id})">
+            ${employee.name} (ID: ${employee.employeeId})
+          </div>
+        `).join('');
+
+        employeeListSection.innerHTML = employeeList;
+      });
+
+    function showEmployeeDetails(id) {
+      fetch('http://jsonblob.com/api/923947078393282560')
+        .then(response => response.json())
+        .then(data => {
+          const employee = data.find(item => item.id === id);
+
+          // Generate HTML for employee details card
+          const employeeDetailsCard = `
+            <div class="employee-details-card">
+              <img src="${employee.image}" alt="${employee.name}">
+              <h3>${employee.name}</h3>
+              <p>Employee ID: ${employee.employeeId}</p>
+              <p>Empire: ${employee.empire}</p>
+              <p>Date of Joining: ${employee.doj}</p>
+              <p>Total Experience: ${employee.totalExp}</p>
+              <p>Work Location: ${employee.workLocation}</p>
+              <p>Technology: ${employee.technology}</p>
+            </div> `;
+
+          employeeDetailsSection.innerHTML = employeeDetailsCard;
+        });
+    }
+  </script>
+</body>
+
+</html>
+

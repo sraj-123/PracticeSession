@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginForm">
+        <input type="text" id="username">
+        <input type="date" id="dob">
+        <button type="submit">login</button>
+    </form>
+
+    <script>
+        // let login = document.querySelector("login").value;
+        // login.addEventListener(event,()=>{
+        //     event.defaultPrevented();
+        //     let username = document.querySelector("name").value;
+        //     let dob = document.querySelector("dob").value;
+        //     console.log({username,dob});
+        // })
+        let loginForm = document.querySelector("#loginForm");
+        let users = document.querySelector(".user");
+        loginForm.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            let username = document.querySelector("#username").value;
+            let dob = document.querySelector("#dob").value;
+            users.innerHTML = users.innerHTML+`<div class='card text-center shadow' style='width:300px'
+            <div class="card-body">
+                <h2>${username}<h2>
+                    <h2>${dob}h2>
+                        </div>
+                        </div>
+                        
+                        `}
+        
+        
+        
+        );
+
+        let delFormButton = document.querySelector('.del-form');
+        function removeForm(){
+            loginForm.remove()
+        }
+        delFormButton.addEventListener('click',removeForm);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

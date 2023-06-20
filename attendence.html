@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="roll">Roll</label>
+        <input type="number" placeholder="Enter" id="roll" name="roll">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter" id="name" name="name"> 
+    </form>
+    <div class="btn-container">
+        <button type="button" onclick="markAttendece('Present')" class="present-btn">Present</button>
+        <button type="button" onclick="markAttendece('Absent')" class="absent-btn">Absent</button>
+        <button type="button" onclick="downloadAttendece()" class="download-btn">Download</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Roll</td>
+                <td>Name</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody id="tableAttednece"></tbody>
+    </table>
+    <script>
+        function markAttendece(status){
+        let roll = document.getElementById("roll").value;
+        let name = document.getElementById("name").value;
+        let table = document.getElementById("tableAttednece");
+        let newRow = table.insertRow(-1);
+        let rollCell = newRow.insertCell(0);
+        let nameCell = newRow.insertCell(1);
+        let statusCell = newRow.insertCell(2);
+        rollCell.innerHTML = roll;
+        nameCell.innerHTML = name;
+        statusCell.innerHTML = status;
+        }
+        function downloadAttendece(){
+            const tableAttednece = document.getElementById("tableAttednece");
+            const exportTable = document.createElement("table");
+            exportTable.innerHTML = tableAttednece.outerHTML;
+            exportTable.deleteRow(0);
+            const csv = [
+                Array.from(exportTable.querySelectorAll("tr")).map(row=>{
+                    return Array.from(row.querySelectorAll("td")).map(cell=>{
+                        return cell.innerText;
+                    }).join(",");
+                }).join("\n")
+            ].join("\n");
+            const blob = new Blob([csv],{type:"text/csv"});
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "attendence.csv";
+            link.click();
+            URL.revokeObjectURL(url);
+            link.remove();
+
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>
